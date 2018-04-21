@@ -103,7 +103,7 @@ namespace TwentyOne
         {
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TwentyOneGame;Integrated Security=True;Connect Timeout=30;
                                         Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            string queryString = "@Select Id, ExceptionType, ExceptionMessage, TimeStamp From Exceptions";
+            string queryString = @"Select Id, ExceptionType, ExceptionMessage, TimeStamp From Exceptions";
             List<ExceptionEntity> Exceptions = new List<ExceptionEntity>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
